@@ -1,0 +1,15 @@
+header {
+  display: flex;
+  height: 520px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  background-color: #43005e;
+  background-image: url("/images/BG.png");
+
+}
+.username{
+  margin-top: 0px;
+  margin-bottom: 35px;
+}
