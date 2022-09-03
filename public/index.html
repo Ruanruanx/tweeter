@@ -15,8 +15,10 @@
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="/styles/header.css" type="text/css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -29,7 +31,7 @@
   <!-- Top nav bar (fixed) -->
   <nav>
     <span class="name">tweeter APP</span>
-    <div  class="instruct">
+    <div class="instruct">
       <span class="command"><b>Write</b> a new tweet</span>
       <i class="fa-solid fa-angles-down"></i>
     </div>
@@ -37,27 +39,30 @@
 
   <header>
     <div>
-        <img src="/images/profile-hex.png"> 
+      <img src="/images/profile-hex.png">
     </div>
     <br>
     <div>
-        <h2 class="username">Your Name</h2>
+      <h2 class="username">Your Name</h2>
     </div>
-</header>
+  </header>
 
   <!-- Page-specific (main) content here -->
   <main class="container">
-  <section class="new-tweet">
-    <h2>Compose Tweet</h2>
-    <form action="/tweets/" method="POST">
-      <label for = "tweet-text" >What're you humming about?</label>
-      <textarea name="text" id = "tweet-text"></textarea>
-      <div>
-        <button type="submit">Tweet</button>
-        <output name="counter" class="counter" for ="tweet-text">140</output>
-      </div>
-    </form>
-  </section>
+    <section class="new-tweet">
+      <h2>Compose Tweet</h2>
+      <form class="newForm" action="/tweets/" method="POST">
+        <label for="tweet-text">What are you humming about?</label>
+        <textarea name="text" id="tweet-text"></textarea>
+        <div>
+          <button type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">
+            <script type="text/javascript" src="/scripts/composer-char-counter.js">
+            </script>
+          </output>
+        </div>
+      </form>
+    </section>
   </main>
 </body>
 

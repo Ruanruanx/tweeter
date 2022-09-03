@@ -1,0 +1,35 @@
+section{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.newForm{
+  width: 100%;
+}
+
+textarea{
+  width: 100%;
+  border-width: 0 0 3px;
+  border-color: black;
+  background-color: #f4f1ec;
+  opacity: .5;
+}
+
+div{
+  display: flex;
+  justify-content: space-between;
+}
+
+button{
+  font-family: 'Bungee', cursive;
+  padding: 8px 24px;
+  background-color: #4056A1;
+  color: white;
+}
+.counter{
+  font-family: 'Bungee', cursive;
+
+}
