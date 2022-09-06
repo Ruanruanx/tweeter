@@ -1,0 +1,36 @@
+.tweet-container{
+  display: flex;
+  margin-top: 2%;
+  width: 100%;
+  border:3px solid rgb(17, 16, 16)
+  
+}
+
+article{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.tweet-header{
+  display: flex;
+  align-items: flex-start;
+  height: fit-content;
+  flex-direction: row;
+  justify-content:space-between;
+  background-color: #f4f1ec;
+  padding-right: 5%;
+}
+
+.imgAndName{
+  justify-content: flex-start;
+  align-items: center;
+}
+.userID{
+  color: #8a8883;
+}
+
+
+
+
+
