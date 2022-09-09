@@ -27,7 +27,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
+
 </head>
 
 <body>
@@ -66,11 +66,11 @@
         </div>
       </form>
     </section>
-    <section class="tweet-container">
+    <section id="tweets-container" class = "tweet-container">
       <article>
         <header class="tweet-header">
           <div class="imgAndName">
-            <img src="/images/profile.png">
+            <img src="https://i.imgur.com/73hZDYK.png">
             <span class="userName">Newton</span>            
           </div>
           <div class="userID">
@@ -78,11 +78,7 @@
           </div>
         </header>
         <section class="main">
-          Since text that has been scaled down to fit a mobile screen may be very small, many mobile browsers apply a text
-          inflation algorithm to enlarge the text to make it more readable. When an element containing text uses 100% of
-          the screen's width, the algorithm increases its text size, but without modifying the layout. The
-          text-size-adjust property allows web authors to disable or modify this behavior, as web pages designed with
-          small screens in mind do not need it.
+          If I have seen further it is by standing on the shoulders of giants
         </section>
         <footer class="tweet-footer">
           <div class="publish-date">
@@ -96,6 +92,12 @@
         </footer>
       </article>
 
+    </section>
+    <section>
+    <output class="tweet">
+      <script type="text/javascript" src="/scripts/client.js"></script>
+
+    </output>
     </section>
   </main>
 </body>
