@@ -67,7 +67,27 @@ $(document).ready(function() {
   </article>`
     return $tweet
   }
-renderTweets(data)
 
+const loadTweets = function(){
+  $.ajax({
+    type: 'GET',
+    url: "/tweets",
+    success: (tweets)=>{
+      renderTweets(tweets)
+    }
+  })
+}
+loadTweets();
+$("form").submit(function(event) {
+  event.preventDefault();
+  $.ajax({
+    type: 'POST',
+    data: $(this).serialize(),
+    url: "/tweets",
+    success: ()=>{
+      loadTweets()
+    }
+  })
+})
 
 })
