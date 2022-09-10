@@ -1,8 +1,6 @@
 .tweet-container {
   display: flex;
-  margin: 2%;
-  width: 97%;
-  border: 3px solid rgb(17, 16, 16)
+  flex-direction: column-reverse;
 }
 
 article {
@@ -10,15 +8,23 @@ article {
   width: 90%;
   flex-direction: column;
   padding: 1%;
+  margin: 2%;
+  width: 97%;
+  border: 3px solid rgb(17, 16, 16);
+  box-shadow: 10px 5px 5px  #8a8883;
 }
 
 .main{
   margin-bottom: 1%;
 }
 
+section.main{
+  align-items: left;
+}
+
 .tweet-header {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   height: fit-content;
   flex-direction: row;
   justify-content: space-between;
@@ -27,8 +33,10 @@ article {
 }
 
 .imgAndName {
-  justify-content: flex-start;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  align-content: center;
 }
 
 .userID {

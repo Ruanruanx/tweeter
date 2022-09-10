@@ -2,8 +2,8 @@ section{
   display: flex;
   width: 100%;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: baseline;
+  align-items: left;
 }
 
 .newForm{
@@ -18,7 +18,7 @@ textarea{
   opacity: .5;
 }
 
-div{
+.buttonCounter{
   display: flex;
   justify-content: space-between;
 }

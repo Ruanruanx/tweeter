@@ -25,9 +25,13 @@
   <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- App JS -->
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
+  <script type="text/javascript" src="/scripts/client.js"></script>
 </head>
 
 <body>
@@ -46,40 +50,34 @@
     </div>
     <br>
     <div>
-      <h2 class="username">Your Name</h2>
+      <h2 class="username">Joey Xin</h2>
     </div>
   </header>
 
   <!-- Page-specific (main) content here -->
   <main class="container">
+    <section class="error">
+      
+    </section>
     <section class="new-tweet">
-      <h2>Compose Tweet</h2>
-      <form class="newForm" action="/tweets/" method="POST">
+    </br>
+      <form id="newForm" class="newForm" action="/tweets/" method="POST">
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
-        <!--
-        <div>
-              <button type="submit">Tweet</button>
-            <div>
-          -->
-        <input type="submit">
-        </div>
+        <div class ="buttonCounter">
+        <button  type="submit" name = "submitTweet">Tweet</button> 
+        <!-- <input type="submit" name = "submitTweet" class="button"> -->
         <output name="counter" class="counter" for="tweet-text">
-          <script type="text/javascript" src="/scripts/composer-char-counter.js">
-          </script>
         </output>
         </div>
       </form>
     </section>
+
+  </br>
+
     <section id="tweets-container" class="tweet-container">
-
     </section>
-    <section>
-      <output class="tweet">
-        <script type="text/javascript" src="/scripts/client.js"></script>
 
-      </output>
-    </section>
   </main>
 </body>
 

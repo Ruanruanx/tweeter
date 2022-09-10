@@ -23,7 +23,8 @@ $(document).ready(function() {
       "user": {
         "name": "Descartes",
         "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
+        "handle": "@rd"
+      },
       "content": {
         "text": "Je pense , donc je suis"
       },
@@ -31,17 +32,25 @@ $(document).ready(function() {
     }
   ]
   const renderTweets = function(dataSet) {
-    for (let data of dataSet) {
-      const $tweet = createTweetElement(data);
-      // Test / driver code (temporary)
-      console.log($tweet); // to see what it looks like
-      $('#tweets-container').append($tweet);
-    }
+
+    // const $tweet = 
+    //  
+    // Test / driver code (temporary)
+    const $tweets = dataSet.map((data) => {
+      return createTweetElement(data);
+    })
+    $('#tweets-container').html($tweets)
 
   }
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = function(data) {
-    let $tweet = `<article>
+    let tweet = `<article>
   <header class="tweet-header">
     <div class="imgAndName">
       <img src= ${data.user.avatars}>
@@ -51,12 +60,13 @@ $(document).ready(function() {
       <span>${data.user.handle}</span>
     </div>
   </header>
+  </br>
   <section class="main">
-    ${data.content.text}
+    ${escape(data.content.text)}
   </section>
   <footer class="tweet-footer">
     <div class="publish-date">
-      ${data.created_at}
+${timeago.format(data.created_at - 1 * 1000)}
     </div>
     <div class="icons">
       <i class="fa-solid fa-flag"></i>
@@ -65,29 +75,42 @@ $(document).ready(function() {
     </div>
   </footer>
   </article>`
-    return $tweet
+    return tweet
   }
 
-const loadTweets = function(){
-  $.ajax({
-    type: 'GET',
-    url: "/tweets",
-    success: (tweets)=>{
-      renderTweets(tweets)
+  const loadTweets = function() {
+    $.ajax({
+      type: 'GET',
+      url: "/tweets",
+      success: (tweets) => {
+        renderTweets(tweets)
+      }
+    })
+  }
+
+  loadTweets();
+
+  $("form").submit(function(event) {
+    if ($("textarea").val().length === 0) {
+      $("error").show("should not be empty")
+      return false;
+    } else if ($("textarea").val().length > 140) {
+      alert("Please be shorter")
+      return false;
+    } else {
+      event.preventDefault();
+      $.ajax({
+        type: 'POST',
+        data: $(this).serialize(),
+        url: "/tweets",
+        success: () => {
+          loadTweets()
+          $("#newForm")[0].reset();
+          $('.counter')[0].innerText = 140;
+        }
+      })
     }
+
   })
-}
-loadTweets();
-$("form").submit(function(event) {
-  event.preventDefault();
-  $.ajax({
-    type: 'POST',
-    data: $(this).serialize(),
-    url: "/tweets",
-    success: ()=>{
-      loadTweets()
-    }
-  })
-})
 
 })
