@@ -83,19 +83,23 @@ ${timeago.format(data.created_at - 1 * 1000)}
       type: 'GET',
       url: "/tweets",
       success: (tweets) => {
+        console.log($(".error"))
+        $(".error").hide();
         renderTweets(tweets)
       }
     })
   }
-
+  $(".error").hide();
   loadTweets();
 
   $("form").submit(function(event) {
     if ($("textarea").val().length === 0) {
-      $("error").show("should not be empty")
+      $(".error").hide();
+      $("#empty").slideDown(1000);
       return false;
     } else if ($("textarea").val().length > 140) {
-      alert("Please be shorter")
+      $(".error").hide();
+      $("#tooLong").slideDown(1000);
       return false;
     } else {
       event.preventDefault();
@@ -104,7 +108,7 @@ ${timeago.format(data.created_at - 1 * 1000)}
         data: $(this).serialize(),
         url: "/tweets",
         success: () => {
-          loadTweets()
+          loadTweets();
           $("#newForm")[0].reset();
           $('.counter')[0].innerText = 140;
         }

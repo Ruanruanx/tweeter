@@ -40,7 +40,7 @@
     <span class="name">tweeter APP</span>
     <div class="instruct">
       <span class="command"><b>Write</b> a new tweet</span>
-      <i class="fa-solid fa-angles-down"></i>
+      <i  class="fa-solid fa-angles-down"></i>
     </div>
   </nav>
 
@@ -56,12 +56,18 @@
 
   <!-- Page-specific (main) content here -->
   <main class="container">
-    <section class="error">
-      
-    </section>
+  </br>
+    
     <section class="new-tweet">
     </br>
       <form id="newForm" class="newForm" action="/tweets/" method="POST">
+        <section id="empty"  class="error">
+          &#9888 Shouldn't be empty &#9888
+        </section>
+        <section id="tooLong"  class="error">
+          &#9888 Please be shorter &#9888
+        </section>
+      </br>
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
         <div class ="buttonCounter">
