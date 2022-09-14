@@ -34,6 +34,23 @@ body {
   align-items: center;
 }
 
-.container{
-  width: 90%; 
+.container {
+  width: 90%;
+  margin: 5%;
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .content{
+    display: flex;
+    flex-direction: row;
+    align-items:start;
+    margin-top: 10vh;
+    padding-left: 5vw;
+  }
+
+  .container{
+    width: 80vw;
+    float: right;
+  }
 }
