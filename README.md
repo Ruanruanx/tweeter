@@ -16,3 +16,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+
+!["Screenshot for desktop view with error message "](https://github.com/Ruanruanx/tweeter/blob/master/doc/Screenshot%20from%202022-09-15%2002-41-43.png?raw=true)
+!["Screenshot for phone view"](https://github.com/Ruanruanx/tweeter/blob/master/doc/Screenshot%20from%202022-09-15%2002-42-13.png?raw=true)
