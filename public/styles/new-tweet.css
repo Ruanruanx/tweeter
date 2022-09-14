@@ -1,4 +1,4 @@
-section{
+section {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -6,17 +6,17 @@ section{
   align-items: left;
 }
 
-.error{
+.error {
   width: 100%;
   border: 3px solid red;
   color: red;
 }
 
-.newForm{
+.newForm {
   width: 100%;
 }
 
-textarea{
+textarea {
   width: 100%;
   border-width: 0 0 3px;
   border-color: black;
@@ -24,18 +24,19 @@ textarea{
   opacity: .5;
 }
 
-.buttonCounter{
+.buttonCounter {
   display: flex;
   justify-content: space-between;
 }
 
-button{
+button {
   font-family: 'Bungee', cursive;
   padding: 8px 24px;
   background-color: #4056A1;
   color: white;
 }
-.counter{
+
+.counter {
   font-family: 'Bungee', cursive;
 
 }

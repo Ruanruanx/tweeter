@@ -42,13 +42,14 @@ $(document).ready(function() {
     $('#tweets-container').html($tweets)
 
   }
-
-  const escape = function (str) {
+//Avoid user add script
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
+  //Create Tweet, generated in html first
   const createTweetElement = function(data) {
     let tweet = `<article>
   <header class="tweet-header">
@@ -92,6 +93,7 @@ ${timeago.format(data.created_at - 1 * 1000)}
   $(".error").hide();
   loadTweets();
 
+  //submit text and show error message
   $("form").submit(function(event) {
     if ($("textarea").val().length === 0) {
       $(".error").hide();

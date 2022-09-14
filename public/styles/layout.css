@@ -41,15 +41,15 @@ body {
 
 @media only screen and (min-width: 1024px) {
 
-  .content{
+  .content {
     display: flex;
     flex-direction: row;
-    align-items:start;
+    align-items: start;
     margin-top: 10vh;
     padding-left: 5vw;
   }
 
-  .container{
+  .container {
     width: 80vw;
     float: right;
   }

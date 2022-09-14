@@ -11,14 +11,14 @@ article {
   margin: 2%;
   width: 97%;
   border: 3px solid rgb(17, 16, 16);
-  box-shadow: 10px 5px 5px  #8a8883;
+  box-shadow: 10px 5px 5px #8a8883;
 }
 
-.main{
+.main {
   margin-bottom: 1%;
 }
 
-section.main{
+section.main {
   align-items: left;
 }
 
@@ -60,19 +60,21 @@ section.main{
   justify-content: space-between;
   align-items: center;
 }
-.icons :hover{
+
+.icons :hover {
   opacity: .5;
   color: rgb(171, 171, 52);
 }
 
-.flag{
+.flag {
   margin-right: 10px;
 }
 
 .icons i,
-.icons svg{
+.icons svg {
   color: rgb(60, 60, 141);
 }
-.heart{
+
+.heart {
   margin-right: 10px;
 }
